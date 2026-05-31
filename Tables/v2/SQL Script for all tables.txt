@@ -1,0 +1,67 @@
+CREATE TABLE [dbo].[admins] (
+    [adminID] INT NOT NULL IDENTITY(1,1),
+    [a_name] VARCHAR(50) NULL, 
+    [gender] VARCHAR(20) NULL, 
+    [contact] VARCHAR(15) NULL, -- Fixed: Changed to VARCHAR to prevent leading zero loss
+    PRIMARY KEY CLUSTERED ([adminID] ASC));
+
+CREATE TABLE [dbo].[artifacts] (
+    [Id]          INT           NOT NULL IDENTITY(1,1),
+    [title]       VARCHAR (30)  NULL,
+    [creator]     VARCHAR (50)  NULL,
+    [yearcreated] INT           NULL,
+    [description] VARCHAR (300) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC));
+
+CREATE TABLE [dbo].[guiders] (
+    [guideID]     INT          IDENTITY (1, 1) NOT NULL,
+    [g_name]      VARCHAR (50) NULL,
+    [gender]      VARCHAR (20) NULL,
+    [experience]  VARCHAR (20) NULL,
+    [is_available] BIT          NULL,
+    [contact]     VARCHAR(15)  NULL, -- Fixed: Changed to VARCHAR to prevent leading zero loss
+    PRIMARY KEY CLUSTERED ([guideID] ASC),
+    UNIQUE NONCLUSTERED ([contact] ASC));
+
+CREATE TABLE [dbo].[tickets] (
+    [ticketID]    INT          NOT NULL IDENTITY(1,1),
+    [ticket_type] VARCHAR (20) NULL UNIQUE,
+    [price]       INT          NULL, -- Fixed: Removed UNIQUE constraint so multiple ticket types can share a price
+    PRIMARY KEY CLUSTERED ([ticketID] ASC));
+
+CREATE TABLE [dbo].[visitors] (
+    [visitorID]       INT          NOT NULL IDENTITY(1,1),
+    [guideID]         INT          NULL,
+    [ticket_type]     VARCHAR (20) NULL,
+    [price_paid]      INT          NULL,
+    [start_date_time] DATETIME     NULL,
+    [end_date_time]   DATETIME     NULL,
+    PRIMARY KEY CLUSTERED ([visitorID] ASC),
+    CONSTRAINT [FK_Table2_Guiders] FOREIGN KEY ([guideID]) REFERENCES [dbo].[guiders] ([guideID]),
+    CONSTRAINT [FK_Table2_Tickets_1] FOREIGN KEY ([ticket_type]) REFERENCES [dbo].[tickets] ([ticket_type])); -- Fixed: Removed trailing comma syntax error
+
+CREATE TABLE [dbo].[c_users] (
+    [userID]    INT          IDENTITY (1, 1) NOT NULL,
+    [u_type]    VARCHAR (20) NULL,
+    [contact]   VARCHAR(15)  NULL, -- Fixed: Changed to VARCHAR to match data types cleanly
+    [visitorID] INT          NULL,
+    [guideID]   INT          NULL,
+    [adminID]   INT          NULL,
+    PRIMARY KEY CLUSTERED ([userID] ASC),
+    UNIQUE NONCLUSTERED ([contact] ASC),
+    CONSTRAINT [FK_Table_Visitors] FOREIGN KEY ([visitorID]) REFERENCES [dbo].[visitors] ([visitorID]),
+    CONSTRAINT [FK_Table_Admins] FOREIGN KEY ([adminID]) REFERENCES [dbo].[admins] ([adminID]),
+    CONSTRAINT [FK_Table_Guiders] FOREIGN KEY ([guideID]) REFERENCES [dbo].[guiders] ([guideID]));
+
+CREATE TABLE [dbo].[user_credentials] (
+    [Id]        INT          IDENTITY (1, 1) NOT NULL, -- Fixed: Added IDENTITY for auto-incrementing
+    [visitorID] INT          NULL,
+    [guideID]   INT          NULL,
+    [adminID]   INT          NULL, 
+    [username]  VARCHAR(100) NULL UNIQUE, 
+    [password]  VARCHAR(50)  NULL, 
+
+	CONSTRAINT [FK_Table_Visitors_1] FOREIGN KEY ([visitorID]) REFERENCES [dbo].[visitors] ([visitorID]),
+    CONSTRAINT [FK_Table_Admins_1] FOREIGN KEY ([adminID]) REFERENCES [dbo].[admins] ([adminID]),
+    CONSTRAINT [FK_Table_Guiders_1] FOREIGN KEY ([guideID]) REFERENCES [dbo].[guiders] ([guideID]),
+    PRIMARY KEY CLUSTERED ([Id] ASC));
