@@ -17,4 +17,4 @@ f.png - profile eka pennana ekath nice and simple. awulak na. eka open karama lo
 
 home wenuwata dashboard kiyala dala okkoma essentials tika ethana pennamu (map eke preview ekak, athualata awilla kochchara welada, guide ge nama, qr ekai id ekai and warnning button eka
 
-dn mee tika use krla anthima iteration eka krnn visitors lage page eke. eita passe admin hari guide lage hri page ek hdnn gnn
+dn mee tika use krla anthima iteration eka krnn visitors lage page eke. eita passe visitors lage page eka visual studio eke design krla iwara krla github ekt push krnn. (eilaga sketch ekt ynn epa hodee, mee sketch eke adupadu tika hdla meke wda iwara krla inna anith sketch ekt ynn klin. nathnm wde krnn wenne na thinadatai matai)
