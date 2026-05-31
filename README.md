@@ -6,4 +6,4 @@
 # Front-end
 
 2026.05.30 - `ui-skeleton` by `sandikahiman`<br>
-2026.05.31 - `ui-skeleton-v2` by `sandikahiman`/ `ui-skeleton-v2-pro` by `sandikahiman`
+2026.05.31 - `ui-skeleton-v2` by `sandikahiman` / `ui-skeleton-v2-pro` by `sandikahiman`
