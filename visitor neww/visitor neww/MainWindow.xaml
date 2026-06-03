@@ -1,0 +1,65 @@
+﻿<Window x:Class="visitor_neww.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:visitor_neww"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Height="58" Margin="294,59,0,0" TextWrapping="Wrap" Text="Login Sign in" VerticalAlignment="Top" Width="272"
+            FontFamily="Arial"
+            FontSize="40"
+            FontWeight="Bold"
+            Foreground="#FF534C4C" RenderTransformOrigin="2.233,0.527"/>
+        <TextBox HorizontalAlignment="Center" Height="38" TextWrapping="Wrap" Text="Visitor ID" VerticalAlignment="Center" Width="506"
+            FontSize="26"
+            BorderBrush="{x:Null}"
+            Background="#FFF6F6F6"
+            Foreground="DarkGray"
+            TextAlignment="Center" RenderTransformOrigin="0.583,0.607"/>
+        <Button Content="Login" HorizontalAlignment="Center" Height="50" Margin="0,304,0,0" VerticalAlignment="Top" Width="168"
+            Background="#FF64CCF1"
+            Foreground="White"
+            FontFamily="Arial"
+            FontSize="20" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Grid>
+            
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#64CCF1" Offset="0"/>
+                    <GradientStop Color="#A8E6FF" Offset="0.5"/>
+                    <GradientStop Color="#FFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            
+
+            
+            <TextBox HorizontalAlignment="Left"
+                Height="38"
+                Text="Visitor ID"
+                VerticalAlignment="Top"
+                Width="506"
+                FontSize="26"
+                BorderBrush="{x:Null}"
+                Background="#FFF6F6F6"
+                Foreground="DarkGray"
+                TextAlignment="Center" Margin="135,179,0,0"/>
+
+            
+            <Button Content="Login"
+                HorizontalAlignment="Left"
+                Height="50"
+                Margin="304,304,0,0"
+                VerticalAlignment="Top"
+                Width="168"
+                Background="#FF64CCF1"
+                Foreground="White"
+                FontFamily="Arial"
+                FontSize="20"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

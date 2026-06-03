@@ -1,0 +1,20 @@
+D:\Games\visitor neww\visitor neww\bin\Debug\net10.0-windows\visitor neww.exe
+D:\Games\visitor neww\visitor neww\bin\Debug\net10.0-windows\visitor neww.deps.json
+D:\Games\visitor neww\visitor neww\bin\Debug\net10.0-windows\visitor neww.runtimeconfig.json
+D:\Games\visitor neww\visitor neww\bin\Debug\net10.0-windows\visitor neww.dll
+D:\Games\visitor neww\visitor neww\bin\Debug\net10.0-windows\visitor neww.pdb
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\MainWindow.g.cs
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\App.g.cs
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww_MarkupCompile.cache
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww_MarkupCompile.lref
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\MainWindow.baml
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.g.resources
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.GeneratedMSBuildEditorConfig.editorconfig
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.AssemblyInfoInputs.cache
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.AssemblyInfo.cs
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.csproj.CoreCompileInputs.cache
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.dll
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\refint\visitor neww.dll
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.pdb
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\visitor neww.genruntimeconfig.cache
+D:\Games\visitor neww\visitor neww\obj\Debug\net10.0-windows\ref\visitor neww.dll
