@@ -1,0 +1,38 @@
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\MainWindow.baml
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\MainWindow.g.cs
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\App.g.cs
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface_MarkupCompile.cache
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.g.resources
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.GeneratedMSBuildEditorConfig.editorconfig
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.AssemblyInfoInputs.cache
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.AssemblyInfo.cs
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.csproj.CoreCompileInputs.cache
+D:\Games\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.exe
+D:\Games\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.deps.json
+D:\Games\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.runtimeconfig.json
+D:\Games\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.dll
+D:\Games\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.pdb
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.dll
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\refint\Guder interface.dll
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.pdb
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.genruntimeconfig.cache
+D:\Games\Guder interface\Guder interface\obj\Debug\net10.0-windows\ref\Guder interface.dll
+D:\sandika wpf\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.exe
+D:\sandika wpf\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.deps.json
+D:\sandika wpf\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.runtimeconfig.json
+D:\sandika wpf\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.dll
+D:\sandika wpf\Guder interface\Guder interface\bin\Debug\net10.0-windows\Guder interface.pdb
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\MainWindow.baml
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\MainWindow.g.cs
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\App.g.cs
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface_MarkupCompile.cache
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.g.resources
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.GeneratedMSBuildEditorConfig.editorconfig
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.AssemblyInfoInputs.cache
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.AssemblyInfo.cs
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.csproj.CoreCompileInputs.cache
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.dll
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\refint\Guder interface.dll
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.pdb
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\Guder interface.genruntimeconfig.cache
+D:\sandika wpf\Guder interface\Guder interface\obj\Debug\net10.0-windows\ref\Guder interface.dll
