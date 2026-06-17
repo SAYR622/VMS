@@ -7,7 +7,7 @@
 2026.06.01 - `project-setup-v1`*(merged)* by `SAYR622`<br>
 2026.06.02 - `project-setup-v2`*(merged)* / original `CHSMS` folder deleted by `SAYR622`<br>
 2026.06.16 - `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
-2026.06.18 - `Login-3-Tier-Completed-+-Admin-UI-Dummy`*(merged)* by `SAYR622` using `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
+2026.06.18 - `Login-v1-+-Admin-UI-Dummy`*(merged)* by `SAYR622` using `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
 
 ## Front-end Sketches
 
