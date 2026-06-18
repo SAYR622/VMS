@@ -1,0 +1,31 @@
+CREATE TABLE [dbo].[admins] (
+    	[adminID] INT          IDENTITY (1, 1) NOT NULL,
+    	[name]  VARCHAR (50) NULL,
+	[username] VARCHAR (100) NULL,
+	[password] VARCHAR (50)  NULL,
+    	[gender]  VARCHAR (20) NULL,
+    	[contact] VARCHAR (15) NULL,
+    	[status] VARCHAR(10) NULL, 
+    	PRIMARY KEY CLUSTERED ([adminID] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[artifacts] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [title]       VARCHAR (30)  NULL,
+    [creator]     VARCHAR (50)  NULL,
+    [yearcreated] INT           NULL,
+    [description] VARCHAR (300) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+CREATE TABLE [dbo].[visitors] (
+    	[visitorID]       INT          IDENTITY (1, 1) NOT NULL,
+    	[email]   VARCHAR(100)     NULL,
+	[start_date_time] DATETIME     NULL,
+    	PRIMARY KEY CLUSTERED ([visitorID] ASC)
+);
+
