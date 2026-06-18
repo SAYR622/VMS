@@ -8,6 +8,7 @@
 2026.06.02 - `project-setup-v2`*(merged)* / original `CHSMS` folder deleted by `SAYR622`<br>
 2026.06.16 - `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
 2026.06.18 - `Login-v1-+-Admin-UI-Dummy`*(merged)* by `SAYR622` using `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
+2026.06.18 - `Recovered-Admin-UI`*(merged)* by `SAYR622` using `unsuccessful-admin-ui` by `Hemanga73`<br>
 
 ## Front-end Sketches
 
