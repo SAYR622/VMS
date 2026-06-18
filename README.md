@@ -9,6 +9,8 @@
 2026.06.16 - `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
 2026.06.18 - `Login-v1-+-Admin-UI-Dummy`*(merged)* by `SAYR622` using `CHSMS-Login-Backend-DAL-BLL` by `sandikahiman`<br>
 2026.06.18 - `Recovered-Admin-UI`*(merged)* by `SAYR622` using `unsuccessful-admin-ui` by `Hemanga73`<br>
+2026.06.18 - `supabase-typeshit` by `thinada-damhiru`<br>
+2026.06.18 - `supabase-integration`*(merged)* by `SAYR622` using `supabase-typeshit` by `thinada-damhiru`<br>
 
 ## Front-end Sketches
 
