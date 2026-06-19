@@ -25,7 +25,7 @@
 			opacity: 0.07;   /* Controls the fade (0.07 = 7% visible). Adjust as preferred */
 			user-select: none;
 			pointer-events: none; /* Prevents users from clicking or selecting them */
-			z-index: 1;      /* Places them behind the form card */
+			z-index: 1;       /* Places them behind the form card */
 			}
 
 			/* Position variations across the screen canvas */
@@ -128,30 +128,63 @@
 			// 1. YOUR SUPABASE CREDENTIALS
 			const SUPABASE_URL = "https://hwhqwjivazdozojhkeli.supabase.co";
 			const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3aHF3aml2YXpkb3pvamhrZWxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3NTgwNjcsImV4cCI6MjA5NzMzNDA2N30.5qgsM9KZ2Ff7EiYWab9yCXfhmibRZOwh4UXM0UiU92Q";
+			
+			// ⚠️ REPLACE THIS with your actual deployed Edge Function Name (e.g., 'send-email')
+			const EDGE_FUNCTION_NAME = "send-email"; 
 
 			// Initialize Supabase client
 			const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 			// 2. Handle Form Submission
 			document.getElementById('emailForm').addEventListener('submit', async (e) => {
-			e.preventDefault();
-			const emailInput = document.getElementById('customerEmail').value;
-			const messageDiv = document.getElementById('message');
+				e.preventDefault();
+				const emailInput = document.getElementById('customerEmail').value;
+				const messageDiv = document.getElementById('message');
+				
+				messageDiv.style.color = "#ffffff";
+				messageDiv.innerText = "Processing...";
 
-			// Insert data into Supabase
-			const { data, error } = await supabaseClient
-			.from('visitors_emails')
-			.insert([{ email: emailInput }]);
+				// STEP A: Insert data into Supabase Database
+				const { data, error: dbError } = await supabaseClient
+					.from('visitors_emails')
+					.insert([{ email: emailInput }]);
 
-			if (error) {
-			console.error(error);
-			messageDiv.style.color = "#ff8080";
-			messageDiv.innerText = "Something went wrong. Please try again.";
-			} else {
-			messageDiv.style.color = "#80ff80";
-			messageDiv.innerText = "You will receive more details through an email.";
-			document.getElementById('emailForm').reset();
-			}
+				if (dbError) {
+					console.error("Database Error:", dbError);
+					messageDiv.style.color = "#ff8080";
+					messageDiv.innerText = "Something went wrong saving your email. Please try again.";
+					return; // Stop execution if DB save fails
+				}
+
+				// STEP B: Trigger the Edge Function to send out the Gmail message
+				try {
+					const functionUrl = `${SUPABASE_URL}/functions/v1/${EDGE_FUNCTION_NAME}`;
+					
+					const response = await fetch(functionUrl, {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+							'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+						},
+						body: JSON.stringify({ visitorEmail: emailInput })
+					});
+
+					const result = await response.json();
+
+					if (!response.ok) {
+						throw new Error(result.error || "Failed to trigger email function");
+					}
+
+					// Everything succeeded!
+					messageDiv.style.color = "#80ff80";
+					messageDiv.innerText = "Success! You will receive more details through an email.";
+					document.getElementById('emailForm').reset();
+
+				} catch (emailError) {
+					console.error("Edge Function Error:", emailError);
+					messageDiv.style.color = "#ffca28"; // Warning yellow shade
+					messageDiv.innerText = "Email saved, but notification failed to send.";
+				}
 			});
 		</script>
 	</body>
