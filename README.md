@@ -16,6 +16,8 @@
 2026.06.19 - `Ongoing-Admin-UI-(Part-1)` by `Hemanga73`<br>
 2026.06.19 - `Ongoing-Admin-UI-(Part-2)` by `Hemanga73`<br>
 2026.06.20 - `Ongoing-Admin-UI-Reimagined`*(merged)* by `SAYR622` using `Ongoing-Admin-UI-(Part-2)` by `Hemanga73`<br>
+2026.06.20 - `Admin-UI-sample-(part-3)` by `Hemanga73`<br>
+2026.06.21 - `Admin-UI-sample-implementation`*(merged)* by `SAYR622` using `Admin-UI-sample-(part-3)` by `Hemanga73`<br>
 
 ## Front-end Sketches
 
