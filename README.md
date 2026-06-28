@@ -24,6 +24,10 @@
 2026.06.27 - `Tables/v4`*(merged)* by `SAYR622`+`thinada-damhiru`<br>
 2026.06.28 - `AdminsManage-&-So-much-more`*(merged)* by `SAYR622`<br>
 2026.06.28 - `Tables/v5`*(merged)* by `SAYR622`<br>
+2026.06.28 - `vms-web-sites` by `thinada-damhiru`<br>
+2026.06.28 - `Websites/Site1` & `Websites/Site2` *(merged)* by `SAYR622` using `vms-web-sites` by `thinada-damhiru`<br>
+2026.06.28 - `Project-name-changing,working-dashboard-&-so-much-more
+`*(merged)* by `SAYR622`<br>
 
 
 ## Front-end Sketches
