@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VMS Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            font-family: "Century Gothic", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh; 
+            background-color: #000000;
+            position: relative;
+            overflow: hidden; 
+        }
+        .background-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+            gap: 15px; 
+            padding: 15px;
+            box-sizing: border-box;
+            z-index: 1;
+            opacity: 0.6; 
+        }
+        .grid-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            user-select: none;
+            pointer-events: none;
+        }
+        .size-large { grid-column: span 2; grid-row: span 2; }
+        .size-wide  { grid-column: span 2; grid-row: span 1; }
+        .size-tall  { grid-column: span 1; grid-row: span 2; }
+        .size-small { grid-column: span 1; grid-row: span 1; }
+
+        .card {
+            background: #284A9D;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 85%;
+            position: relative;
+            z-index: 2;
+        }
+        h2, p { color: #ffffff; }
+        input {
+            width: 90%;
+            padding: 12px;
+            border: none;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            background: transparent;
+            color: rgb(255, 255, 255);
+            outline: none;
+        }
+        #customerEmail::placeholder { color: white; opacity: 1; }
+        button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .background-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 90px;
+                gap: 6px; 
+                padding: 6px;
+                opacity: 0.60; 
+            }
+            .size-large { grid-column: span 2; grid-row: span 2; }
+            .size-wide  { grid-column: span 2; grid-row: span 1; }
+            .size-tall  { grid-column: span 1; grid-row: span 2; }
+            .size-small { grid-column: span 1; grid-row: span 1; }
+            .card { width: 90%; padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-grid">
+        <img src="1.jpg" class="grid-image size-large" alt="Historical Site">
+        <img src="2.jpg" class="grid-image size-wide" alt="Historical Site">
+        <img src="3.jpg" class="grid-image size-tall" alt="Historical Site">
+        <img src="4.jpg" class="grid-image size-small" alt="Historical Site">
+        <img src="5.jpg" class="grid-image size-wide" alt="Historical Site">
+        <img src="6.jpg" class="grid-image size-tall" alt="Historical Site">
+        <img src="7.jpg" class="grid-image size-small" alt="Historical Site">
+        <img src="8.webp" class="grid-image size-large" alt="Historical Site">
+        <img src="9.jpg" class="grid-image size-tall" alt="Historical Site">
+        <img src="10.jpg" class="grid-image size-large" alt="Historical Site">
+        <img src="11.jpeg" class="grid-image size-large" alt="Historical Site">
+        <img src="12.jpg" class="grid-image size-large" alt="Historical Site">
+        <img src="13.jpeg" class="grid-image size-small" alt="Historical Site">
+        <img src="14.jpg" class="grid-image size-small" alt="Historical Site">
+        <img src="15.jpg" class="grid-image size-small" alt="Historical Site">
+        <img src="16.jpg" class="grid-image size-small" alt="Historical Site">
+        <img src="17.jpg" class="grid-image size-small" alt="Historical Site">
+    </div>
+
+    <div class="card" id="formCard">
+        <h2>Welcome to VMS</h2>
+        <p style="color: white;">Please enter your email below.</p>
+        <form id="emailForm">
+            <input type="hidden" id="qrSource" value="3" />
+            <input type="email" id="customerEmail" placeholder="Enter email" required />
+            <br />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const SUPABASE_URL = "https://hwhqwjivazdozojhkeli.supabase.co";
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3aHF3aml2YXpkb3pvamhrZWxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3NTgwNjcsImV4cCI6MjA5NzMzNDA2N30.5qgsM9KZ2Ff7EiYWab9yCXfhmibRZOwh4UXM0UiU92Q";
+        const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        document.getElementById('emailForm').addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+            const emailInput = document.getElementById('customerEmail');
+            const email = emailInput.value;
+            const source = document.getElementById('qrSource').value;
+            const card = document.getElementById('formCard');
+
+            card.innerHTML = `
+                <div style="padding: 20px 0; animation: fadeIn 0.5s ease-in;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px;">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h2 style="margin-top: 0; color: white;">You're All Set!</h2>
+                    <p style="color: #E2E8F0; font-size: 15px; line-height: 1.5;">Your visit has been registered.<br>An informational email is on its way to your inbox.</p>
+                    <p style="color: #94A3B8; font-size: 13px; margin-top: 30px;">You can now close this tab and enjoy the site.</p>
+                </div>
+                <style>
+                    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+                </style>
+            `;
+
+            try {
+                const { error: dbError } = await supabaseClient
+                    .from('visitors_emails')
+                    .insert([{ email: email, site: parseInt(source) }]);
+
+                if (dbError) throw dbError;
+
+                fetch(`${SUPABASE_URL}/functions/v1/send-email`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+                    },
+                    body: JSON.stringify({ email: email, source: source })
+                }).catch(err => console.error("Email Edge Function failed:", err));
+            } catch (err) {
+                console.error("Background task failed:", err);
+            }
+        });
+    </script>
+</body>
+</html>
