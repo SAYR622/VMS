@@ -29,7 +29,7 @@
 2026.06.28 - `Project-name-changing,working-dashboard-&-so-much-more
 `*(merged)* by `SAYR622`<br>
 2026.06.30 - `Websites/Site3` *(merged)* by `SAYR622` using `VMS-Website-3` by `thinada-damhiru`<br>
-
+2026.06.30 - `Websites/Site1` & `Websites/Site2` & `Websites/Site3` *(merged)* by `SAYR622` (Upadated the aftermath of Submit)
 
 ## Front-end Sketches
 
