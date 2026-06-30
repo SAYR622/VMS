@@ -30,6 +30,7 @@
 `*(merged)* by `SAYR622`<br>
 2026.06.30 - `Websites/Site3` *(merged)* by `SAYR622` using `VMS-Website-3` by `thinada-damhiru`<br>
 2026.06.30 - `Websites/Site1` & `Websites/Site2` & `Websites/Site3` *(merged)* by `SAYR622` (Updated the aftermath of Submit)
+2026.06.30 - `EmailCenter-AccountSettings-&-So-on` *(merged)* by `SAYR622` using `VMS-Email-Center-&-Email-Editor-Implementation` by `thinada-damhiru`<br>
 
 ## Front-end Sketches
 
