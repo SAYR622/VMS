@@ -28,6 +28,8 @@
 2026.06.28 - `Websites/Site1` & `Websites/Site2` *(merged)* by `SAYR622` using `vms-web-sites` by `thinada-damhiru`<br>
 2026.06.28 - `Project-name-changing,working-dashboard-&-so-much-more
 `*(merged)* by `SAYR622`<br>
+2026.06.29 - `VMS-Email-Center-&-Email-Editor-Implementation` by `thinada-damhiru`<br>
+2026.06.29 - `VMS-Website-3` by `thinada-damhiru`<br>
 2026.06.30 - `Websites/Site3` *(merged)* by `SAYR622` using `VMS-Website-3` by `thinada-damhiru`<br>
 2026.06.30 - `Websites/Site1` & `Websites/Site2` & `Websites/Site3` *(merged)* by `SAYR622` (Updated the aftermath of Submit)<br>
 2026.06.30 - `EmailCenter-AccountSettings-&-So-on` *(merged)* by `SAYR622` using `VMS-Email-Center-&-Email-Editor-Implementation` by `thinada-damhiru`<br>
