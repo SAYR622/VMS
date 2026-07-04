@@ -36,6 +36,7 @@
 2026.07.01 - `Removed-old-files-from-EmailCenter` *(merged)* by `SAYR622`<br>
 2026.07.04 - `RequestAccount_username_confliction` *(merged)* by `SAYR622`<br>
 2026.07.04 - `Websites/Site1` & `Websites/Site2` & `Websites/Site3` *(merged)* by `SAYR622` (Updated the design and added the logo)<br>
+2026.07.04 - `QR/Site1_QR` & `QR/Site2_QR` & `QR/Site3_QR` *(merged)* by `SAYR622` using `VMS-QR-Codes` by `thinada-damhiru`<br>
 
 ## Front-end Sketches
 
