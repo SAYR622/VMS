@@ -33,7 +33,8 @@
 2026.06.30 - `Websites/Site3` *(merged)* by `SAYR622` using `VMS-Website-3` by `thinada-damhiru`<br>
 2026.06.30 - `Websites/Site1` & `Websites/Site2` & `Websites/Site3` *(merged)* by `SAYR622` (Updated the aftermath of Submit)<br>
 2026.06.30 - `EmailCenter-AccountSettings-&-So-on` *(merged)* by `SAYR622` using `VMS-Email-Center-&-Email-Editor-Implementation` by `thinada-damhiru`<br>
-2026.07.01 - `Removed-old-files-from-EmailCenter` by `SAYR622`<br>
+2026.07.01 - `Removed-old-files-from-EmailCenter` *(merged)* by `SAYR622`<br>
+2026.07.04 - `RequestAccount_username_confliction` *(merged)* by `SAYR622`<br>
 
 ## Front-end Sketches
 
